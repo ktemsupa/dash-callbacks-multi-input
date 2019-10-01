@@ -8,8 +8,8 @@ from dash.dependencies import Input, Output, State
 
 myheading1='How to use callbacks with multiple inputs'
 tabtitle = 'Australia Guide'
-list_of_cities=['Sydney', 'Gold Coast', 'Brisbane']
-list_of_beaches=['Beach 1', 'Beach 2', 'Beach 3']
+list_of_colors=['Sydney', 'Gold Coast', 'Brisbane']
+list_of_numbers=['Beach 1', 'Beach 2', 'Beach 3']
 sourceurl = 'https://dash.plot.ly/getting-started-part-2'
 githublink = 'https://github.com/austinlasseter/dash-callbacks-multi-input'
 
