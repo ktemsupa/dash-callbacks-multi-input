@@ -7,9 +7,9 @@ from dash.dependencies import Input, Output, State
 ########### Define your variables ######
 
 myheading1='How to use callbacks with multiple inputs'
-tabtitle = 'lightsabers!'
-list_of_colors=['red', 'green', 'blue']
-list_of_numbers=['one', 'two', 'three']
+tabtitle = 'Australia Guide'
+list_of_cities=['Sydney', 'Gold Coast', 'Brisbane']
+list_of_beaches=['Beach 1', 'Beach 2', 'Beach 3']
 sourceurl = 'https://dash.plot.ly/getting-started-part-2'
 githublink = 'https://github.com/austinlasseter/dash-callbacks-multi-input'
 
@@ -28,7 +28,7 @@ app.layout = html.Div(children=[
     html.H1(myheading1),
     html.Div([
         html.Div([
-            dcc.RadioItems(
+            dcc.Dropdown(
                 id='pick-a-color',
                 options=[
                         {'label':list_of_colors[0], 'value':list_of_colors[0]},
@@ -39,7 +39,7 @@ app.layout = html.Div(children=[
                 ),
         ],className='two columns'),
         html.Div([
-            dcc.RadioItems(
+            dcc.Dropdown(
                 id='pick-a-number',
                 options=[
                         {'label':list_of_numbers[0], 'value':list_of_numbers[0]},
