@@ -35,7 +35,7 @@ app.layout = html.Div(children=[
                         {'label':list_of_cities[1], 'value':list_of_cities[1]},
                         {'label':list_of_cities[2], 'value':list_of_cities[2]},
                         ],
-                value='sydney',
+                value='Sydney',
                 ),
         ],className='two columns'),
         html.Div([
@@ -46,7 +46,7 @@ app.layout = html.Div(children=[
                         {'label':list_of_numbers[1], 'value':list_of_numbers[1]},
                         {'label':list_of_numbers[2], 'value':list_of_numbers[2]},
                         ],
-                value='one',
+                value='One',
                 ),
         ],className='two columns'),
         html.Div([
