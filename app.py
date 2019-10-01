@@ -6,12 +6,12 @@ from dash.dependencies import Input, Output, State
 
 ########### Define your variables ######
 
-myheading1='How to use callbacks with multiple inputs'
+myheading1='Which Australian Beach should you Travel to?'
 tabtitle = 'Australia Guide'
-list_of_colors=['Sydney', 'Gold Coast', 'Brisbane']
-list_of_numbers=['Beach 1', 'Beach 2', 'Beach 3']
+list_of_cities=['Sydney', 'Gold Coast', 'Brisbane']
+list_of_numbers=['1st Beach', '2nd Beach', '3rd Beach']
 sourceurl = 'https://dash.plot.ly/getting-started-part-2'
-githublink = 'https://github.com/austinlasseter/dash-callbacks-multi-input'
+githublink = 'https://github.com/ktemsupa/dash-callbacks-multi-input'
 
 
 ########## Set up the chart
@@ -29,11 +29,11 @@ app.layout = html.Div(children=[
     html.Div([
         html.Div([
             dcc.Dropdown(
-                id='pick-a-color',
+                id='pick-a-city',
                 options=[
-                        {'label':list_of_colors[0], 'value':list_of_colors[0]},
-                        {'label':list_of_colors[1], 'value':list_of_colors[1]},
-                        {'label':list_of_colors[2], 'value':list_of_colors[2]},
+                        {'label':list_of_cities[0], 'value':list_of_cities[0]},
+                        {'label':list_of_cities[1], 'value':list_of_cities[1]},
+                        {'label':list_of_cities[2], 'value':list_of_cities[2]},
                         ],
                 value='choose',
                 ),
@@ -63,10 +63,10 @@ app.layout = html.Div(children=[
 ########## Define Callback
 
 @app.callback(Output('your_output_here', 'children'),
-              [Input('pick-a-color', 'value'),
+              [Input('pick-a-city', 'value'),
                Input('pick-a-number', 'value')])
-def radio_results(color_you_picked, number_you_picked):
-    image_you_chose=f'{color_you_picked}-{number_you_picked}.jpg'
+def radio_results(city_you_picked, number_you_picked):
+    image_you_chose=f'{city_you_picked}-{number_you_picked}.jpg'
     return html.Img(src=app.get_asset_url(image_you_chose), style={'width': 'auto', 'height': 'auto'}),
 
 ############ Deploy
