@@ -9,7 +9,7 @@ from dash.dependencies import Input, Output, State
 myheading1='Which Australian Beach should you Travel to?'
 tabtitle = 'Australia Guide'
 list_of_cities=['Sydney', 'Gold Coast', 'Brisbane']
-list_of_numbers=['1st Beach', '2nd Beach', '3rd Beach']
+list_of_numbers=['One', 'Two', 'Three']
 sourceurl = 'https://dash.plot.ly/getting-started-part-2'
 githublink = 'https://github.com/ktemsupa/dash-callbacks-multi-input'
 
