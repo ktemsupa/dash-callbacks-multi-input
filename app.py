@@ -6,8 +6,8 @@ from dash.dependencies import Input, Output, State
 
 ########### Define your variables ######
 
-myheading1='Which Australian Beach should you Travel to?'
-tabtitle = 'Australia Guide'
+myheading1='Top Australian Beaches You Should Visit!'
+tabtitle = 'Australian Beach Guide'
 list_of_cities=['Sydney', 'Gold Coast', 'Brisbane']
 list_of_numbers=['One', 'Two', 'Three']
 sourceurl = 'https://dash.plot.ly/getting-started-part-2'
@@ -35,7 +35,7 @@ app.layout = html.Div(children=[
                         {'label':list_of_cities[1], 'value':list_of_cities[1]},
                         {'label':list_of_cities[2], 'value':list_of_cities[2]},
                         ],
-                value='choose',
+                value='sydney',
                 ),
         ],className='two columns'),
         html.Div([
